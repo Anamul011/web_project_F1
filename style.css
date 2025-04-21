@@ -1,0 +1,10 @@
+/*Keep images and video responsive*/
+img, video{
+	max-width: 100%;
+	height: auto;
+}
+
+
+body{
+    background-color: #00b5ff
+}
