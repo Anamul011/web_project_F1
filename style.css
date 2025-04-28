@@ -1,10 +1,52 @@
 /*Keep images and video responsive*/
-img, video{
+img,
+video {
 	max-width: 100%;
 	height: auto;
 }
 
+body {
+	background-color: #00b5ff;
+	font-family: Arial, sans-serif;
+}
 
-body{
-    background-color: #00b5ff
+header {
+	background-color: rgba(0, 255, 231, 0.9);
+	color: #000000;
+}
+
+a {
+	color: rgb(255, 255, 255);
+}
+a:hover {
+	color: red;
+}
+a:visited {
+	color: rgb(82, 80, 80);
+}
+
+/*Text sTYLES */
+
+h1 {
+	font-size: 3rem;
+	font-size: 40p;
+	font-weight: 100;
+	text-align: left;
+}
+h2 {
+	font-size: 2rem;
+	font-size: 26px;
+	font-weight: 700;
+}
+figcaption {
+	font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Raleway", serif;
 }
