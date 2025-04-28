@@ -11,8 +11,21 @@ body {
 }
 
 header {
-	background-color: rgba(0, 255, 231, 0.9);
+	background-color: rgba(0, 151, 137, 0.9);
 	color: #000000;
+}
+/*Navigation bar for the websites */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	text-align: right;
+}
+
+nav li{
+  display: inline-block;
+  margin-right: 20px;
 }
 
 a {
@@ -37,16 +50,25 @@ h2 {
 	font-size: 2rem;
 	font-size: 26px;
 	font-weight: 700;
+	text-align: right;
 }
 figcaption {
 	font-size: 12px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Raleway", serif;
+
+
+
+
+
+footer p {
+	text-align: right;
+}
+
+main h1 {
+	text-align: center;
+}
+
+ main figure img {
+	text-align: center;
 }
