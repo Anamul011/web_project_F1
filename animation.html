@@ -3,36 +3,87 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Title</title>
+        <title>Anamul</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
-            <div class="site-title">Your Anamul's Portfolio</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="images.html">Images</a></li>
-                    <li><a href="audio.html">Audio</a></li>
-                    <li><a href="animation.html">Animation</a></li>
-                </ul>
-            </nav>
+            <header>
+                <nav>
+                    <div class="nav-container">
+                        <div class="logo">Anamul's Portfolio</div>
+        
+                        <input type="checkbox" id="toggle" />
+                        <label for="toggle" class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+        
+                        <ul class="menu">
+                            <li><a href="index.html" >Home</a></li>
+                            <li><a href="images.html">Images</a></li>
+                            <li><a href="audio.html">Audio</a></li>
+                            <li><a href="animation.html" class="active"  >Animation</a></li>
+                        </ul>
+                        </li>
+        
+                        </ul>
+                    </div>
+                </nav>
+            </header>
         </header>
 
         <main>
-            <h1>Animation</h1>
+            <section class="project-description">
+                <h1><strong>🎬✨The Journey of Star 💫🍽️❤️ </strong></h1>
+
+                <p class="hover-paragraph">
+                  🍽️ I decided to animate the emotions of <strong>frustration</strong> and <strong>hunger</strong>. The main character, <strong>Star</strong>, begins the animation feeling hungry and increasingly annoyed by the colorful shapes floating around him. These elements represent distractions and obstacles in his path to peace and satisfaction.
+                </p>
+                
+                <p class="hover-paragraph">
+                  🎨 I chose a <strong>white background</strong> to ensure the colorful shapes, text, and the star character stood out and attracted attention. As the story progresses, the background shifts to <strong>pink</strong> during moments of food sharing, symbolizing <strong>romance</strong> and <strong>emotional warmth</strong>. Rounded rectangles represent the <strong>romantic partner</strong> Star finds in the end.
+                </p>
+                
+                <p class="hover-paragraph">
+                  ⏱️ The <strong>pacing</strong> was carefully planned: the first 2–3 seconds show Star feeling hungry. Around the 6-second mark, he becomes annoyed as shapes continue to surround and disturb him. By the 10th second, Star begins consuming the shapes.
+                </p>
+                
+                <p class="hover-paragraph">
+                  💖 In the final few seconds, he <strong>finds his partner</strong> and <strong>shares his food</strong> with her, highlighting a turning point from <strong>frustration</strong> to <strong>love and harmony</strong>.
+                </p>
+                
+              </section>
+              
             
             
-       <video controls>
-  <source src="Media/Star_1.mp4" type="video/mp4">
-  Your browser does not support the vi+deo tag.
-</video>
+              <video class="unique-video" controls>
+                <source src="Media/Star_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              
   
             
         </main>
 
+
         <footer>
-            <p>Created by Anamul Hoque. &copy; 2025 All rights reserved.</p>
+            <pre  class="footer-text" >Created by Anamul Hoque. &copy; 2025 All rights reserved.</pre>
+            
         </footer>
+
+        <script>
+            window.addEventListener('scroll', () => {
+              const video = document.querySelector('.unique-video');
+              const videoPosition = video.getBoundingClientRect().top;
+              const screenHeight = window.innerHeight;
+          
+              if (videoPosition < screenHeight - 100) {
+                video.classList.add('show');
+              }
+            });
+          </script>
+          
     </body>
 </html>

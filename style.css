@@ -6,7 +6,7 @@ video {
 }
 
 body {
-	background-color: #00b5ff;
+	background-color: #ffffff;
 	font-family: Arial, sans-serif;
 }
 
@@ -14,9 +14,80 @@ header {
 	background-color: rgba(0, 151, 137, 0.9);
 	color: #000000;
 }
+
+footer pre {
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.footer-text:hover {
+    background-color: #001aff; /* or any hover color you like */
+} 
+
+p{
+	text-align: center;
+	
+}
+
+
+/* Paragraph hoverover  */
+
+
+.hover-paragraph {
+    font-size: 20px; /* default size */
+    transition: all 0.3s ease;
+    padding: 10px;
+    border: 1px solid transparent;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hover-paragraph:hover {
+    font-size: 24px; /* increased size on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* shadow effect */
+    background-color: #f9f9f9; /* optional for contrast */
+    border-color: #ccc; /* optional border */
+}
+
+
+
+/* intro page images  */
+
+
+.unique-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 50px auto;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll effect (when it becomes visible) */
+.unique-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect */
+.unique-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+
 /*Navigation bar for the websites */
 
-nav ul {
+/* nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -36,7 +107,231 @@ a:hover {
 }
 a:visited {
 	color: rgb(82, 80, 80);
+} */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  nav {
+	background: linear-gradient(
+	  90deg,
+	  rgba(2, 0, 36, 1) 0%,
+	  rgba(9, 9, 121, 1) 35%,
+	  rgba(0, 66, 79, 1) 100%
+	);
+	padding: 1rem 2rem;
+  }
+  
+  .nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	color: #fff;
+  }
+  
+  .logo {
+	font-size: 1.6rem;
+	font-weight: 700;
+  }
+  
+  /* Hamburger */
+  #toggle {
+	display: none;
+  }
+  
+  .hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 5px;
+  }
+  
+  .hamburger span {
+	height: 3px;
+	width: 25px;
+	background: #fff;
+	border-radius: 3px;
+  }
+  
+  /* Menu */
+  .menu {
+	display: flex;
+	list-style: none;
+	gap: 2rem;
+	transition: all 0.3s ease;
+  }
+  
+  .menu li {
+	position: relative;
+  }
+  
+  .menu li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	padding: 0.5rem;
+	transition: 0.3s;
+  }
+  
+  .menu li a:hover {
+	color: #00c9ff;
+  }
+  
+  /* Dropdown */
+  .menu li ul {
+	/* margin: 10px 0; */
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #2c5364;
+	display: none;
+	list-style: none;
+	padding: 0.5rem 0;
+	border-radius: 6px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	min-width: 160px;
+  }
+  
+  .menu li:hover ul {
+	display: block;
+  }
+  
+  .menu li ul li a {
+	padding: 0.6rem 1rem;
+	display: block;
+  }
+  
+  .menu li ul li a:hover {
+	background-color: #1e3c52;
+  }
+
+  .menu a.active {
+    color: #FFFF00; /* or your preferred highlight */
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700;
 }
+
+
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+	.hamburger {
+	  display: flex;
+	}
+  
+	.menu {
+	  width: 100%;
+	  flex-direction: column;
+	  max-height: 0;
+	  overflow: hidden;
+	}
+  
+	.menu li {
+	  width: 100%;
+	}
+  
+	.menu li ul {
+	  position: static;
+	  box-shadow: none;
+	}
+  
+	#toggle:checked + .hamburger + .menu {
+	  max-height: 1000px;
+	  margin-top: 2rem;
+	}
+	.menu a.active {
+		color: #FFFF00; /* or your preferred highlight */
+		font-weight: bold;
+		border-bottom: 1px solid #FFD700;
+	}
+	img {
+		max-width: 60%;
+		height: auto;
+	  }
+  }
+
+  /* For the audios  */
+  .custom-audio-container {
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e2f, #2a2a3e);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 183, 0.2);
+  width: 90%;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  border: 2px solid transparent;
+}
+
+.custom-audio-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(0, 255, 183, 0.5);
+  border-image: linear-gradient(45deg, #00ffb7, #00c2ff) 1;
+}
+
+  
+
+.audio-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#audioUI button,
+#playBtn {
+  background: #00ffb7;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#playBtn:hover {
+  background: #00c2ff;
+  transform: scale(1.05);
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #00ffb7, #00c2ff);
+  transition: width 0.25s;
+}
+
+.time {
+  font-size: 14px;
+  color: #ccc;
+}
+
+  
+  
+
+
+
+
 
 /*Text sTYLES */
 
@@ -45,6 +340,8 @@ h1 {
 	font-size: 40p;
 	font-weight: 100;
 	text-align: left;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
 }
 h2 {
 	font-size: 2rem;
@@ -72,3 +369,33 @@ main h1 {
  main figure img {
 	text-align: center;
 }
+
+
+/* Video or the animation css  */
+.unique-video {
+	width: 100%;
+	max-width: 600px;
+	display: block;
+	margin: 30px auto;
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+	opacity: 0;
+	transform: translateY(40px);
+	filter: brightness(95%);
+  }
+  
+  /* Fade in and pop up when scrolled into view */
+  .unique-video.show {
+	opacity: 1;
+	transform: translateY(0);
+	filter: brightness(100%);
+  }
+  
+  /* Hover effect */
+  .unique-video:hover {
+	transform: scale(1.03);
+	box-shadow: 0 15px 30px rgba(0, 4, 255, 0.3);
+	filter: brightness(105%);
+  }
+  

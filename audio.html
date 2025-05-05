@@ -1,37 +1,109 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Anamul</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
         <header>
-            <div class="site-title">Your Anamul's Portfolio</div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="images.html">Images</a></li>
-                    <li><a href="audio.html">Audio</a></li>
-                    <li><a href="animation.html">Animation</a></li>
-                </ul>
+                <div class="nav-container">
+                    <div class="logo">Anamul's Portfolio</div>
+
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="images.html">Images</a></li>
+                        <li><a href="audio.html" class="active">Audio</a></li>
+                        <li><a href="animation.html">Animation</a></li>
+                    </ul>
+                    </li>
+
+                    </ul>
+                </div>
             </nav>
         </header>
+    </header>
 
-        <main>
-            <h1>Audio</h1>
-            
-            
-            
-            <audio controls>
-  <source src="Media/FinalV2.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+    <main>
+        <h1><strong>🌌🌲 The Forest Nightmare 🦉🐺</strong></h1>
 
-        </main>
+        <p class="hover-paragraph">
+            A man suddenly falls asleep and dreams that he's in the middle of a <strong>deep forest</strong>, exploring
+            unfamiliar places.
+        </p>
 
-        <footer>
-            <p>Created by Anamul Hoque. &copy; 2025 All rights reserved.</p>
-        </footer>
-    </body>
+        <p class="hover-paragraph">
+            He hears the sounds of <strong>birds chirping</strong> when suddenly, a <strong>monster</strong> attacks
+            them. One of the birds, an <strong>owl</strong>, lets out a loud scream.
+        </p>
+
+        <p class="hover-paragraph">
+            The monster then notices the boy and starts <strong>chasing him</strong>. He runs desperately, escaping the
+            forest, but the <strong>wolf</strong> continues to pursue him.
+        </p>
+
+        <p class="hover-paragraph">
+            After a while, the wolf gives up and <strong>howls loudly</strong>. The boy's heart races as he glances at
+            the clock—it’s nearly <strong>sunrise</strong>.
+        </p>
+
+        <p class="hover-paragraph">
+            The <strong>rooster crows</strong>, signaling the start of a new day, and the boy wakes up, realizing it was
+            all a <strong>terrifying nightmare</strong>.
+        </p>
+
+
+
+
+        <!-- <audio controls>
+            <source src="Media/FinalV2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> -->
+
+
+
+        <div class="custom-audio-container">
+            <audio id="customAudio">
+              <source src="Media/FinalV2.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          
+            <div class="audio-ui">
+              <button id="playBtn">▶️ Play</button>
+              <div class="progress-bar-container">
+                <div id="progressBar"></div>
+              </div>
+              <div class="time">
+                <span id="current">0:00</span> / <span id="total">0:00</span>
+              </div>
+            </div>
+          </div>
+          
+          
+
+
+    </main>
+
+    <footer>
+        <pre class="footer-text">Created by Anamul Hoque. &copy; 2025 All rights reserved.</pre>
+
+    </footer>
+
+    
+    <script src="script.js" > </script>
+
+    
+</body>
+
 </html>
